@@ -8,7 +8,7 @@ Setup
 
     - This project are using the Python 3.10.5 (https://www.python.org/downloads/release/python-3105/)
     - Clone the project for your preference directory
-    - Install the dependencies using the command pip install -r requirements.txt
+    - Install the dependencies using the command pip3 install -r requirements.txt
 
 Run the test
 
