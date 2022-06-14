@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220614 03:06:33.652" rpa="false" schemaversion="3">
+<suite id="s1" name="Contact Us Tc" source="C:\bees-test\contact_us_test\contact_us_tc.robot">
+<test id="s1-t1" name="Scenario 1" line="5">
+<kw name="Given User is on contact us page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220614 03:06:33.875" level="INFO">Opening browser 'chrome' to base url 'https://www.ambev.com.br/contato/'.</msg>
+<status status="PASS" starttime="20220614 03:06:33.874" endtime="20220614 03:06:41.415"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220614 03:06:41.415" endtime="20220614 03:06:41.528"/>
+</kw>
+<kw name="Click to close cookies area" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BT_CLOSE_COOKIES_AREA}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220614 03:06:41.529" level="INFO">Clicking button '//div[@id="onetrust-close-btn-container"]/button'.</msg>
+<status status="PASS" starttime="20220614 03:06:41.529" endtime="20220614 03:06:41.607"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:41.528" endtime="20220614 03:06:41.607"/>
+</kw>
+<kw name="Contact us should be ready" library="resource">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${BT_YES}</arg>
+<arg>${BT_YES_TEXT}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220614 03:06:41.653" level="INFO">Element 'class:age-gate-dialog__answer-button' contains text ''.</msg>
+<status status="PASS" starttime="20220614 03:06:41.608" endtime="20220614 03:06:41.653"/>
+</kw>
+<kw name="Cookie area should not more present" library="resource">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${BT_CLOSE_COOKIES_AREA}</arg>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220614 03:06:41.654" endtime="20220614 03:06:42.533"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:41.653" endtime="20220614 03:06:42.533"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:41.607" endtime="20220614 03:06:42.534"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:33.874" endtime="20220614 03:06:42.534"/>
+</kw>
+<kw name="When Click in &quot;Sim&quot;" library="resource" sourcename="Click in &quot;${BUTTON}&quot;">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220614 03:06:42.534" level="INFO">Clicking button 'Sim'.</msg>
+<status status="PASS" starttime="20220614 03:06:42.534" endtime="20220614 03:06:42.672"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:42.534" endtime="20220614 03:06:42.672"/>
+</kw>
+<kw name="And Choose consumer in the dropbox interest area" library="resource">
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>${LIST_INTEREST_AREA}</arg>
+<arg>${CONSUMER_OPTION_LIST}</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20220614 03:06:42.673" level="INFO">Selecting options from selection list 'area-of-interest' by index 1.</msg>
+<status status="PASS" starttime="20220614 03:06:42.673" endtime="20220614 03:06:42.806"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:42.673" endtime="20220614 03:06:42.807"/>
+</kw>
+<kw name="And Choose sugestion in the radio button subject" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RB_SUGESTION_OPTION}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220614 03:06:42.808" level="INFO">Clicking element '//*[@id="assunto"]/span[5]/label/span'.</msg>
+<status status="PASS" starttime="20220614 03:06:42.808" endtime="20220614 03:06:42.865"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:42.807" endtime="20220614 03:06:42.865"/>
+</kw>
+<kw name="And Fill the field &quot;nome&quot; with &quot;Luan Alves&quot;" library="resource" sourcename="And Fill the field &quot;${field_name}&quot; with &quot;${field_value}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_name}</arg>
+<arg>${field_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220614 03:06:42.866" level="INFO">Typing text 'Luan Alves' into text field 'nome'.</msg>
+<status status="PASS" starttime="20220614 03:06:42.866" endtime="20220614 03:06:42.968"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:42.865" endtime="20220614 03:06:42.968"/>
+</kw>
+<kw name="And Fill the field &quot;mensagem&quot; with &quot;Can you hire me for the job?&quot;" library="resource" sourcename="And Fill the field &quot;${field_name}&quot; with &quot;${field_value}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${field_name}</arg>
+<arg>${field_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220614 03:06:42.968" level="INFO">Typing text 'Can you hire me for the job?' into text field 'mensagem'.</msg>
+<status status="PASS" starttime="20220614 03:06:42.968" endtime="20220614 03:06:43.078"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:42.968" endtime="20220614 03:06:43.079"/>
+</kw>
+<kw name="And Click in &quot;Enviar&quot;" library="resource" sourcename="Click in &quot;${BUTTON}&quot;">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220614 03:06:43.080" level="INFO">Clicking button 'Enviar'.</msg>
+<status status="PASS" starttime="20220614 03:06:43.079" endtime="20220614 03:06:43.147"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:43.079" endtime="20220614 03:06:43.147"/>
+</kw>
+<kw name="Then Website should show an alert about required fill email field" library="resource">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${FIELD_ERROR_MESSAGE}</arg>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220614 03:06:43.185" level="INFO">Element 'email-error' contains text 'Este campo é requerido.'.</msg>
+<status status="PASS" starttime="20220614 03:06:43.148" endtime="20220614 03:06:43.186"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220614 03:06:43.186" endtime="20220614 03:06:45.281"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:43.148" endtime="20220614 03:06:45.281"/>
+</kw>
+<status status="PASS" starttime="20220614 03:06:33.873" endtime="20220614 03:06:45.282"/>
+</test>
+<status status="PASS" starttime="20220614 03:06:33.653" endtime="20220614 03:06:45.283"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Contact Us Tc">Contact Us Tc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
